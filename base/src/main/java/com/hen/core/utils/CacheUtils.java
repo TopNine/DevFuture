@@ -1,10 +1,10 @@
-package com.example.core.utils;
+package com.hen.core.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.core.BaseApplication;
+import com.hen.core.BaseApplication;
 import com.example.core.R;
 
 public class CacheUtils {

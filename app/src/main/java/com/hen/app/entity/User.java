@@ -1,4 +1,4 @@
-package com.example.app.entity;
+package com.hen.app.entity;
 
 public class User {
     private String username;

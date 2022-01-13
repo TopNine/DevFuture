@@ -1,12 +1,13 @@
-package com.example.lesson;
+package com.hen.lesson;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
-import com.example.core.BaseView;
-import com.example.lesson.entity.Lesson;
+import com.hen.core.BaseView;
+import com.example.lesson.R;
+import com.hen.lesson.entity.Lesson;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.app.widget;
+package com.hen.app.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,13 +8,13 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
 
-import com.example.app.R;
-import com.example.core.utils.Utils;
-
-import java.util.Random;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
+
+import com.example.app.R;
+import com.hen.core.utils.Utils;
+
+import java.util.Random;
 
 public class CodeView extends AppCompatTextView {
 

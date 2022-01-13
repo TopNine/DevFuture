@@ -1,4 +1,4 @@
-package com.example.lesson.entity;
+package com.hen.lesson.entity;
 
 public class Lesson {
     public enum State {

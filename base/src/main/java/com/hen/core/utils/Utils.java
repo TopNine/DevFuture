@@ -1,11 +1,11 @@
-package com.example.core.utils;
+package com.hen.core.utils;
 
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.widget.Toast;
 
-import com.example.core.BaseApplication;
+import com.hen.core.BaseApplication;
 
 public class Utils {
 

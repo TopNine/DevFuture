@@ -5,7 +5,7 @@
     <application>
         <activity
             android:theme="@style/LessonTheme"
-            android:name="com.example.lesson.LessonActivity"/>
+            android:name="com.example.lesson.com.hen.lesson.LessonActivity"/>
     </application>
 
 </manifest>

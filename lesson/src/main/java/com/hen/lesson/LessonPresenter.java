@@ -1,9 +1,9 @@
-package com.example.lesson;
+package com.hen.lesson;
 
-import com.example.core.utils.Utils;
-import com.example.core.http.EntityCallback;
-import com.example.core.http.HttpClient;
-import com.example.lesson.entity.Lesson;
+import com.hen.core.utils.Utils;
+import com.hen.core.http.EntityCallback;
+import com.hen.core.http.HttpClient;
+import com.hen.lesson.entity.Lesson;
 import com.google.gson.reflect.TypeToken;
 
 

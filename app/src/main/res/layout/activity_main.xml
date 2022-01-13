@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.example.app.MainActivity">
+    tools:context="com.example.app.com.hen.app.MainActivity">
 
 
     <LinearLayout
@@ -59,7 +59,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
-        <com.example.app.widget.CodeView
+        <com.hen.app.widget.CodeView
             android:id="@+id/code_view"
             android:layout_margin="8dp"
             android:layout_width="80dp"

@@ -1,4 +1,4 @@
-package com.example.core.http;
+package com.hen.core.http;
 
 import com.google.gson.Gson;
 

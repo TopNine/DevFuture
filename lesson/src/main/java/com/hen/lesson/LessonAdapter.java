@@ -1,11 +1,12 @@
-package com.example.lesson;
+package com.hen.lesson;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.core.BaseViewHolder;
-import com.example.lesson.entity.Lesson;
+import com.hen.core.BaseViewHolder;
+import com.example.lesson.R;
+import com.hen.lesson.entity.Lesson;
 
 import java.util.ArrayList;
 import java.util.List;

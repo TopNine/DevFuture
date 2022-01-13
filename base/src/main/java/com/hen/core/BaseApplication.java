@@ -1,4 +1,4 @@
-package com.example.core;
+package com.hen.core;
 
 import android.app.Application;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.example.app;
+package com.hen.app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,14 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.app.entity.User;
-import com.example.app.widget.CodeView;
-import com.example.core.utils.CacheUtils;
-import com.example.core.utils.Utils;
-import com.example.lesson.LessonActivity;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.app.R;
+import com.hen.app.entity.User;
+import com.hen.app.widget.CodeView;
+import com.hen.core.utils.CacheUtils;
+import com.hen.core.utils.Utils;
+import com.hen.lesson.LessonActivity;
 
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener {
