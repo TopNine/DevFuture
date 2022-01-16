@@ -1,65 +1,40 @@
-package com.hen.lesson;
+package com.hen.lesson
 
-import com.hen.core.utils.Utils;
-import com.hen.core.http.EntityCallback;
-import com.hen.core.http.HttpClient;
-import com.hen.lesson.entity.Lesson;
-import com.google.gson.reflect.TypeToken;
+import com.google.gson.reflect.TypeToken
+import com.hen.core.http.EntityCallback
+import com.hen.core.http.HttpClient.get
+import com.hen.core.utils.Utils.toast
+import com.hen.lesson.entity.Lesson
+import java.util.*
 
+class LessonPresenter(val activity: LessonActivity) {
+    private var lessons: List<Lesson> = ArrayList()
+    private val type = object : TypeToken<List<Lesson>>() {}.type
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-class LessonPresenter {
-    private static final String LESSON_PATH = "lessons";
-
-    private LessonActivity activity;
-
-    LessonPresenter(LessonActivity activity) {
-        this.activity = activity;
-    }
-
-    private List<Lesson> lessons = new ArrayList<>();
-
-    private final Type type = new TypeToken<List<Lesson>>() {
-    }.getType();
-
-    void fetchData() {
-        HttpClient.INSTANCE.get(LESSON_PATH, type, new EntityCallback<List<Lesson>>() {
-            @Override
-            public void onSuccess(@NonNull final List<Lesson> lessons) {
-                LessonPresenter.this.lessons = lessons;
-                activity.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        activity.showResult(lessons);
-                    }
-                });
+    fun fetchData() {
+        get(LESSON_PATH, type, object : EntityCallback<List<Lesson>> {
+            override fun onSuccess(entity: List<Lesson>) {
+                lessons = entity
+                activity.runOnUiThread { activity.showResult(entity) }
             }
 
-            @Override
-            public void onFailure(@Nullable final String message) {
-                activity.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Utils.toast(message);
-                    }
-                });
+            override fun onFailure(message: String?) {
+                activity.runOnUiThread { toast(message) }
             }
-        });
+        })
     }
 
-    void showPlayback() {
-        List<Lesson> playbackLessons = new ArrayList<>();
-        for (Lesson lesson : lessons) {
-            if (lesson.getState() == Lesson.State.PLAYBACK) {
-                playbackLessons.add(lesson);
+    fun showPlayback() {
+        val playbackLessons: MutableList<Lesson> = ArrayList()
+        for (lesson in lessons) {
+            if (lesson.state === Lesson.State.PLAYBACK) {
+                playbackLessons += lesson
             }
         }
-        activity.showResult(playbackLessons);
+        activity.showResult(playbackLessons)
+    }
+
+    companion object {
+        const val LESSON_PATH = "lessons"
     }
 }

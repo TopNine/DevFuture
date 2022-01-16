@@ -1,5 +1,5 @@
-package com.hen.core;
+package com.hen.core
 
-public interface BaseView<T> {
-    T getPresenter();
+interface BaseView<T> {
+    val presenter: T
 }
